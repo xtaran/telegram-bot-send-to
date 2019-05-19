@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+
+# Simple client to let a Telegram Bot send a Telegram User a Message
+#
+# Meant to let monitoring systems alert users via Telegram.
+
+# Copyright (C) 2019  Axel Beckert <abe@debian.org>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+package Telegram::BotClient;
+
+use warnings;
+use strict;
+
+use Mojo::Base 'Telegram::Bot::Brain';
+use Mojo::File;
+
+my $token_file = '/etc/telegram-bot-send-to.token';
+unless (-e $token_file) {
+    die "$token_file doesn't exist. Please created it and save the bot token in it.";
+}
+unless (-r $token_file) {
+    die "$token_file exists, but is not readable for this script."
+}
+
+my $token = Mojo::File->new($token_file)->slurp;
+$token =~ s/^\s+|\s+$//gs;
+has token => $token;
+
+# setup our bot
+sub init {
+    my $self = shift;
+    my $msg = '';
+
+    do {
+	local $/ = undef; # slurp mode
+	$msg = <STDIN>;
+    };
+
+    exit 1 if $msg eq '';
+
+    foreach my $recipient (split(/,/, $ARGV[0])) {
+	$self->send_message_to_chat_id(
+	    $recipient,
+	    $msg,
+	    { parse_mode => 'HTML' });
+    }
+
+    # We are a one shot script
+    exit;
+}
+
+### Run
+Telegram::BotClient->new->think;
