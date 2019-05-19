@@ -27,14 +27,16 @@ use strict;
 use Mojo::Base 'Telegram::Bot::Brain';
 use Mojo::File;
 
+# Path
 my $token_file = '/etc/telegram-bot-send-to.token';
-unless (-e $token_file) {
-    die "$token_file doesn't exist. Please created it and save the bot token in it.";
-}
-unless (-r $token_file) {
-    die "$token_file exists, but is not readable for this script."
-}
 
+# Commandline parsing
+die "$token_file doesn't exist. Please created it and save the bot token in it."
+    unless (-e $token_file);
+die "$token_file exists, but is not readable for this script."
+    unless (-r $token_file);
+
+# Normalize the token
 my $token = Mojo::File->new($token_file)->slurp;
 $token =~ s/^\s+|\s+$//gs;
 has token => $token;
