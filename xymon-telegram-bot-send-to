@@ -1,3 +1,4 @@
 #!/bin/sh
+# See https://www.xymon.com/help/xymon-alerts.html#scripts
 
 printf "$BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG" | /usr/local/bin/telegram-bot-send-to $RCPT
