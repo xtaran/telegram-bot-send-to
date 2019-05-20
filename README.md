@@ -45,6 +45,10 @@ Find your bot by e.g. the chosen user name by searching for it in
 contacts. Click on the bot and press the Start button shown in bot
 chat pane.
 
+This needs to be done for every intended recipient of the
+messages. For group chats, the bot needs to be invited to the group
+chat.
+
 ### Figuring out your Telegram Chat ID
 
 Unfortunately you can't user your chosen Telegram user name as
@@ -60,6 +64,9 @@ Start a Telegram chat with
 
 It can also tell you the Telegram Chat IDs of your contacts or even
 Telegram Groups.
+
+In a later version there might be a command line option to show the
+Chat IDs known to the bot.
 
 Installation
 ------------
