@@ -1,0 +1,3 @@
+#!/bin/sh
+
+printf "$BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG" | /usr/local/bin/telegram-bot-send-to $RCPT
