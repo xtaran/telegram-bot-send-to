@@ -39,6 +39,12 @@ Save the received token in a file named
 Make sure you set the file owner, file group and permissions so that
 only those users who may use the bot can read the file.
 
+### Start a Chat with Your New Bot
+
+Find your bot by e.g. the chosen user name by searching for it in
+contacts. Click on the bot and press the Start button shown in bot
+chat pane.
+
 ### Figuring out your Telegram Chat ID
 
 Unfortunately you can't user your chosen Telegram user name as
@@ -114,6 +120,15 @@ HOST=mail.example.com SERVICES=conn,ssh,imap,pop3
 ```
 
 etc.
+
+FAQ
+---
+
+### I always get "Bad Request" when trying to use the bot.
+
+You haven't (or the recipient hasn't) started a chat with your bot
+yet. This seems necessary (probably to avoid spamming with bots) to
+make your Telegram bot being able to write to the recipient.
 
 Copyright and License
 ---------------------
