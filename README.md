@@ -1,5 +1,5 @@
-Minimal Perl Script to Send Telegram Messages as a Bot
-======================================================
+Tiny Perl Script to Send Telegram Messages as a Bot
+===================================================
 
 Goal
 ----
@@ -27,10 +27,16 @@ phone number to which your Telegram account will be
 ([more or less](https://www.telegram.org/faq#q-how-do-i-change-my-phone-number))
 tied.
 
+The usual way to create an account is to use either the
+[Telegram App](https://www.telegram.org/apps) (available for Android,
+iOS and Windows Phone) or the
+[Telegram Desktop App](https://desktop.telegram.org/) available for
+Linux (32 and 64 Bit), macOS and Windows.
+
 ### Create a Telegram Bot and Get a Bot Token
 
 Start a Telegram chat with [@BotFather](https://t.me/botfather)
-([Details](https://core.telegram.org/bots#3-how-do-i-create-a-bot),
+([Details](https://core.telegram.org/bots#3-how-do-i-create-a-bot)),
 send the command `/newbot` and follow the instructions.
 
 Save the received token in a file named
@@ -113,17 +119,17 @@ HOST=www.example.com SERVICES=conn,ssh,http
 You might also want to use macros to avoid repetition:
 
 ```
-$TGSEND=SCRIPT /usr/local/bin/xymon-telegram-bot-send-to
+$TGSEND=/usr/local/bin/xymon-telegram-bot-send-to
 $ME=your-chat-id-here
 
 HOST=www.example.com SERVICES=conn,ssh,http
-	$TGSEND $ME DURATION>15 RECOVERED FORMAT=TEXT
+	SCRIPT $TGSEND $ME DURATION>15 RECOVERED FORMAT=TEXT
 
 HOST=ftp.example.com SERVICES=conn,ssh,ftp
-	$TGSEND $ME DURATION>60 RECOVERED FORMAT=TEXT
+	SCRIPT $TGSEND $ME DURATION>60 RECOVERED FORMAT=TEXT
 
 HOST=mail.example.com SERVICES=conn,ssh,imap,pop3
-	$TGSEND $ME DURATION>15 RECOVERED FORMAT=TEXT
+	SCRIPT $TGSEND $ME DURATION>15 RECOVERED FORMAT=TEXT
 ```
 
 etc.
