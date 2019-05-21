@@ -1,5 +1,5 @@
-Send Telegram Bot Messages from the Commandline
-===============================================
+Send Telegram Bot Messages from Scripts
+=======================================
 
 Goal
 ----
