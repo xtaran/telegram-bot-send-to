@@ -149,7 +149,7 @@ make your Telegram bot being able to write to the recipient.
 Copyright and License
 ---------------------
 
-Copyright © 2019  Axel Beckert <abe@debian.org>
+Copyright © 2019  Axel Beckert <abe@deuxchevaux.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the
