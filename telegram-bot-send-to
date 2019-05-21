@@ -47,7 +47,14 @@ my $msg = <STDIN>;
 die 'Empty message!' if $msg eq '';
 
 foreach my $recipient (split(/,/, $ARGV[0])) {
-    sendMessageTo($msg, $recipient);
+    if (length($msg) > 4096) {
+	my @msgchunks = ( $msg =~ m(.{1,4096})gs );
+	foreach my $msgchunk (@msgchunks) {
+	    sendMessageTo($msgchunk, $recipient);
+	}
+    } else {
+	sendMessageTo($msg, $recipient);
+    }
 }
 
 # Functions
