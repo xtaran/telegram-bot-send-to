@@ -31,7 +31,10 @@ The usual way to create an account is to use either the
 [Telegram App](https://www.telegram.org/apps) (available for Android,
 iOS and Windows Phone) or the
 [Telegram Desktop App](https://desktop.telegram.org/) available for
-Linux (32 and 64 Bit), macOS and Windows.
+Linux (32 and 64 Bit, also officially packaged at least
+[for Debian](https://packages.debian.org/telegram-desktop) and
+[for Ubuntu](https://packages.ubuntu.com/telegram-desktop)), macOS and
+Windows.
 
 ### Create a Telegram Bot and Get a Bot Token
 
