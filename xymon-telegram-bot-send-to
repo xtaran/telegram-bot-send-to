@@ -5,4 +5,4 @@ if [ "$RECOVERED" = 1 ]; then
     echo "RECOVERED: $BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG";
 else
     echo "$BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG";
-fi | /usr/local/bin/telegram-bot-send-to $RCPT
+fi | cut -c1-4095 -z | /usr/local/bin/telegram-bot-send-to $RCPT
