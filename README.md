@@ -4,7 +4,7 @@ Send Telegram Bot Messages from Scripts
 Goal
 ----
 
-Send system monitoring alerts out via
+Send [Xymon](https://www.xymon.com/) system monitoring alerts out via
 [Telegram](https://www.telegram.org/) instead of costly SMS.
 
 Result
@@ -12,7 +12,7 @@ Result
 
 A very compact and generic [Perl](https://www.perl.org/) script with
 minimal dependencies (only [Mojolicious](https://mojolicio.us/)) which
-is allowing a lot of possible uses.
+is allowing a lot of possible use cases.
 
 Plus a wrapper to plug it into the [Xymon](https://www.xymon.com/)
 (formerly known as Hobbit) monitoring system for sending out
@@ -50,7 +50,7 @@ only those users who may use the bot can read the file.
 
 ### Start a Chat with Your New Bot
 
-Find your bot by e.g. the chosen user name by searching for it in
+Find your bot by e.g. searching for the chosen user name in the
 contacts. Click on the bot and press the Start button shown in bot
 chat pane.
 
