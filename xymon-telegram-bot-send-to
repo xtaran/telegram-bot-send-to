@@ -2,7 +2,7 @@
 # See https://www.xymon.com/help/xymon-alerts.html#scripts
 
 if [ "$RECOVERED" = 1 ]; then
-    printf "RECOVERED: $BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG";
+    echo "RECOVERED: $BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG";
 else
-    printf "$BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG";
+    echo "$BBHOSTSVC is $BBCOLORLEVEL:\n\n$BBALPHAMSG";
 fi | /usr/local/bin/telegram-bot-send-to $RCPT
