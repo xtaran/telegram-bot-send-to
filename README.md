@@ -1,5 +1,5 @@
-Tiny Perl Script to Send Telegram Messages as a Bot
-===================================================
+Send Telegram Bot Messages from the Commandline
+===============================================
 
 Goal
 ----
