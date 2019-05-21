@@ -137,6 +137,21 @@ HOST=mail.example.com SERVICES=conn,ssh,imap,pop3
 
 etc.
 
+Limitations
+-----------
+
+* [Telegram doesn't support messages longer than 4kB.](https://core.telegram.org/method/messages.sendMessage#return-errors)
+
+  The rather generic tool `telegram-bot-send-to` *splits* longer
+  messages into multiple messages.
+
+  Nevertheless it doesn't seem to make sense to send out monitoring
+  status messages with more than 4kB contents (e.g. the process list
+  of the `cpu` check) per instant messenger as the full message can be
+  read on the web anyways. So the Xymon alert script
+  `xymon-telegram-bot-send-to` *truncates* alert messages at the
+  4095th byte before passing it to `telegram-bot-send-to`.
+
 FAQ
 ---
 
