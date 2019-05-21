@@ -55,6 +55,6 @@ sub sendMessageTo {
     my ($msg, $rcp) = map { url_escape($_) } @_;
     my $tx = $ua->get("https://api.telegram.org/bot$token/sendMessage?parse_mode=html&chat_id=$rcp&text=$msg");
     my $res = $tx->result;
-    if ($res->is_error) { say STDERR $res->message }
+    if ($res->is_error) { say STDERR $res->code.' '.$res->message."\n".$res->body }
 }
 
