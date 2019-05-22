@@ -181,7 +181,7 @@ Disclaimer
 ----------
 
 The existence of these scripts and this git repository is by no means
-an encouragement to use Telegram. It has been created to scratch the
-author's own itch and has been shared in true open source and free
-software spirit to allow others to scratch themselves if they happen
-to have the same itch. ;-)
+an endorsement of or encouragement to use Telegram. It has been
+created to scratch the author's own itch and has been shared in true
+open source and free software spirit to allow others to scratch
+themselves if they happen to have the same itch. ;-)
