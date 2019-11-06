@@ -65,14 +65,24 @@ recipient address. Instead you need the unique "Chat ID" every
 Telegram user and group chat has. Unfortunately it's nowhere visible
 in the common Telegram apps.
 
-But there are bots who can help you with this:
+But there are bots and alternative Telegram clients who can help you
+with this:
 
-Start a Telegram chat with
-[@get_id_bot](https://t.me/get_id_bot) and tap or type
-`/start`. The bot will tell you your Telegram Chat ID.
+* Use the [telegram-cli aka tg](https://github.com/vysheng/tg) client
+  and use its command `get_self` to show your own "Chat ID" and
+  `user_info some-contact-name` to show you the "Chat ID" of someone
+  in your contact list.
 
-It can also tell you the Telegram Chat IDs of your contacts or even
-Telegram Groups.
+* Start a Telegram chat with
+  [@get_id_bot](https://t.me/get_id_bot) and tap or type
+  `/start`. The bot will tell you your Telegram Chat ID.
+
+  It can also tell you the Telegram Chat IDs of your contacts or even
+  Telegram Groups.
+
+* Start a Telegram chat with
+  [@chatid_echo_bot](https://t.me/chatid_echo_bot) and tap or type
+  `/start`. The bot will tell you your Telegram Chat ID.
 
 In a later version there might be a command line option to show the
 Chat IDs known to the bot.
