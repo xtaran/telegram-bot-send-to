@@ -87,6 +87,12 @@ with this:
 In a later version there might be a command line option to show the
 Chat IDs known to the bot.
 
+The bot scripts in this repository currently has no reply
+functionality as they are one-shot scripts and no daemons. Replying
+with your "Chat ID" or even the line to add to Xymon's `alerts.cfg`
+could be an additional feature which might be added as a standalone
+daemon script later.
+
 Installation
 ------------
 
