@@ -1,0 +1,6 @@
+*~
+/*.substvars
+/.debhelper/
+/debhelper-build-stamp
+/files
+/telegram-bot-send-to/

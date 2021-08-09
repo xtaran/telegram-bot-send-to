@@ -1,0 +1,5 @@
+telegram-bot-send-to (1.0.0-1) unstable; urgency=medium
+
+  * Initial packaging.
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Mon, 09 Aug 2021 13:03:03 +0200
