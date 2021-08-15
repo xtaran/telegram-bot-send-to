@@ -1,3 +1,9 @@
+telegram-bot-send-to (1.0.1-1) unstable; urgency=medium
+
+  * Fix previously hardcoded path in xymon-telegram-bot-send-to.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 15 Aug 2021 12:52:40 +0200
+
 telegram-bot-send-to (1.0.0-1) unstable; urgency=medium
 
   * Initial packaging.
