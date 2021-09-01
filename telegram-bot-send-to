@@ -31,7 +31,7 @@ my $token_file = '/etc/telegram-bot-send-to.token';
 
 # Commandline parsing
 die 'No recipients!' unless exists($ARGV[0]) && defined($ARGV[0]);
-die "$token_file doesn't exist. Please created it and save the bot token in it."
+die "$token_file doesn't exist. Please create it and save the bot token in it."
     unless (-e $token_file);
 die "$token_file exists, but is not readable for this script."
     unless (-r $token_file);
