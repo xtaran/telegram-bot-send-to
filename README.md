@@ -60,7 +60,7 @@ chat.
 
 ### Figuring out your Telegram Chat ID
 
-Unfortunately you can't user your chosen Telegram user name as
+Unfortunately you can't use your chosen Telegram user name as
 recipient address. Instead you need the unique "Chat ID" every
 Telegram user and group chat has. Unfortunately it's nowhere visible
 in the common Telegram apps.
